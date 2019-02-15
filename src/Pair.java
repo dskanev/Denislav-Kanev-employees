@@ -9,6 +9,7 @@ public class Pair {
     private int employee2;
     private Set<Integer> commonProjects;
 
+
     public Pair (int eID1, int eID2) {
         this.employee1 = eID1;
         this.employee2 = eID2;
@@ -40,15 +41,19 @@ public class Pair {
         return result;
     }
 
-    public int getEmployee1() {
-        return employee1;
+
+    public boolean addProjectID(int projectID) {
+        return commonProjects.add(projectID);
     }
 
-    public int getEmployee2() {
-        return employee2;
+    @Override
+    public String toString() {
+        return "Pair{" +
+                "employee1=" + employee1 +
+                ", employee2=" + employee2 +
+                ", days together "
+                ;
     }
 
-    public Set<Integer> getCommonProjects() {
-        return commonProjects;
-    }
+
 }
